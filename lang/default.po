@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ite\n"
+"POT-Creation-Date: 2013-04-27 23:50+0200\n"
+"PO-Revision-Date: 2013-04-27 23:50+0200\n"
+"Last-Translator: Samet ATABAŞ <sametatabasch>\n"
+"Language-Team: Samet ATABAŞ <sametatabasch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /var/www/localhost/htdocs/ite\n"
+
+#: /var/www/localhost/htdocs/ite/index.php:21
+msgid "Hoşgeldiniz"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/index.php:23
+msgid ""
+"Geldinizde ne oldu işinize yarayan bir şey barmı burada bir bakın bakem:) "
+"Buradaki yazınında ingilizce çevirisi yapılır.Bizim birde çeviri işlerini "
+"yapacak birini bulmamız lazım:) Daha fazlasına tıklayınca birtane Modal "
+"açılır artık "
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/index.php:26
+msgid "Daha Fazlasını Öğren"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/index.php:35
+#: /var/www/localhost/htdocs/ite/index.php:42
+#: /var/www/localhost/htdocs/ite/index.php:49
+msgid "Devamı"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/ders.php:27
+msgid "Konu Anlatımı"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/ders.php:28
+msgid "Örnekler"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/ders.php:29
+msgid "Oyun"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/ders.php:30
+msgid "Kazanımlar"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:11
+msgid "Giriş Yap"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:16
+msgid "Öğrenci Giriş"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:22
+#: /var/www/localhost/htdocs/ite/tema/header.php:50
+msgid "Lütfen gerekli alanları doldurunuz"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:24
+msgid "Mail adresiniz"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:24
+msgid "Mail Adresinisiz Giriniz"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:27
+msgid "Şifre"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:27
+msgid "Şifrenizi giriniz"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:30
+msgid "Beni hatırla"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:35
+#: /var/www/localhost/htdocs/ite/tema/header.php:55
+msgid "Vazgeç"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:36
+msgid "Giriş"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:39
+msgid "Üye ol"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:44
+msgid "Yeni Üye Formu"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/header.php:56
+msgid "Üye Ol"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/menu.php:17
+#: /var/www/localhost/htdocs/ite/tema/sidebar.php:9
+msgid "Ana Sayfa"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/menu.php:18
+msgid "Hakkında"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/menu.php:19
+msgid "İletişim"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/menu.php:24
+msgid "Ara"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/sidebar.php:10
+msgid "Editör"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/sidebar.php:11
+msgid "Profil"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/sidebar.php:12
+msgid "Forum"
+msgstr ""
+
+#: /var/www/localhost/htdocs/ite/tema/sidebar.php:14
+msgid "Ders"
+msgstr ""
