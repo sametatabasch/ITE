@@ -50,12 +50,10 @@ class database {
      */
     private function baglantiyisonlandir() {
         mysql_close($this->connection);
-        
     }
 
     function __construct($charSet = 'utf8') {
         $this->baglan($charSet);
-       
     }
 
 //    function __destruct() {
@@ -101,9 +99,9 @@ class database {
         $s;
         foreach ($set as $alan => $veri) {
             if (empty($s)) {
-                $s = $alan . '=\'' . $this->string_temizle($veri).'\'';
+                $s = $alan . '=\'' . $this->string_temizle($veri) . '\'';
             } else {
-                $s.=',' . $alan . '=\'' . $this->string_temizle($veri).'\'';
+                $s.=',' . $alan . '=\'' . $this->string_temizle($veri) . '\'';
             }
         }
         $sql = "UPDATE $tablo SET $s WHERE $kosul";
@@ -151,13 +149,10 @@ class database {
             if ($sql) {
                 return true;
             } else {
-                if (mysql_errno() == 1062) {
-                    die('Email adresi kullanılıyor');
-                    return false;
-                } else {
+                
                     echo mysql_error();
                     return false;
-                }
+                
             }
         } else {
             return die('Veriler Yanlış Girilmiş Lütfen Verileri Kontrol Ediniz');
@@ -195,8 +190,37 @@ class database {
      * @return array
      */
     public function fetch_array($sql) {
-        return mysql_fetch_array(mysql_query($sql));
+        $sorgu = mysql_query($sql);
+        if (!$sorgu) {
+            echo mysql_error();
+        }
+        $sonuclar = array();
+        while ($sonuc = mysql_fetch_array($sorgu)) {
+            array_push($sonuclar, $sonuc);
+        }
+        if(count($sonuclar)==1){
+            $sonuclar=$sonuclar[0];
+        }
+        return $sonuclar;
+        //return mysql_fetch_array(mysql_query($sql));
     }
+
+    public function fetch_assoc($sql) {
+        $sorgu = mysql_query($sql);
+        if (!$sorgu) {
+            echo mysql_error();
+        }
+        $sonuclar = array();
+        while ($sonuc = mysql_fetch_assoc($sorgu)) {
+            array_push($sonuclar, $sonuc);
+        }
+        if(count($sonuclar)==1){
+            $sonuclar=$sonuclar[0];
+        }
+        return $sonuclar;
+        //return mysql_fetch_assoc(mysql_query($sql));
+    }
+
     /**
      * 
      * @param type $string

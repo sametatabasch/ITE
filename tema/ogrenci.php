@@ -2,7 +2,7 @@
 include_once './config.php';
 $VT = new database;
 $sql = "SELECT * FROM " . $_SESSION['yetki'] . " WHERE id=" . $_SESSION['id'];
-$veriler = $VT->fetch_array($sql);
+$veriler = $VT->fetch_assoc($sql);
 ?>
 <div class="row-fluid">
     <!-- Sidebar-->
@@ -182,75 +182,43 @@ $veriler = $VT->fetch_array($sql);
                 <?php
                 switch ($veriler['sinifi']) {
                     case 2:
-                        $dersler = array(1, 2, 3);
+                        $derslerDizi = array(1, 2, 3);
                         break;
                     case 3:
-                        $dersler = array(1, 2, 3);
+                        $derslerDizi = array(1, 2, 3);
                         break;
                     case 4:
-                        $dersler = array(1, 2, 4, 5);
+                        $derslerDizi = array(1, 2, 4, 5);
                         break;
                     case 5:
-                        $dersler = array(1, 2, 4, 5);
+                        $derslerDizi = array(1, 2, 4, 5);
                         break;
                     case 6:
-                        $dersler = array(1, 2, 4, 5);
+                        $derslerDizi = array(1, 2, 4, 5);
                         break;
                     case 7:
-                        $dersler = array(1, 2, 4, 5);
+                        $derslerDizi = array(1, 2, 4, 5);
                         break;
                     case 8:
-                        $dersler = array(1, 2, 5, 6);
+                        $derslerDizi = array(1, 2, 5, 6);
                         break;
                 }
-//              $VT= new database();
-               $dersler = $VT->fetch_array("SELECT * FROM dersler");
-                   echo '<pre>';
-                   print_r($dersler);
-                   echo '</pre>';
-               
+                $dersler = $VT->fetch_assoc("SELECT * FROM dersler");
                 ?>
                 <div class="span12 well">
-
                     <h4><?php _e('Dersler') ?></h4>
                     <ul class="thumbnails" >
-                        <li class="span3">
-                            <div class="thumbnail"style="background:#ffffff;">
-                                <div class="caption">
-                                    <h2 class="text-success"><?php _e('Matematik') ?></h2>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+                        <?php foreach ($derslerDizi as $ders): ?>
+                            <li class="span3">
+                                <div class="thumbnail"style="background:#ffffff;">
+                                    <div class="caption">
+                                        <h3 class="text-success"><?php _e($dersler[$ders - 1]['adi']) ?></h3>
+                                        <p><?php $dersler[$ders - 1]['aciklama'] ?></p>
+                                        <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div class="thumbnail" style="background:#ffffff;">
-                                <div class="caption">
-                                    <h2 class="text-success"><?php _e('Türkçe') ?></h2>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div class="thumbnail"  style="background:#ffffff;">
-                                <div class="caption">
-                                    <h2 class="text-success"><?php _e('Fizik') ?></h2>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div class="thumbnail" style="background:#ffffff;">
-                                <div class="caption">
-                                    <h2 class="text-success"><?php _e('Kimya') ?></h2>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <small>Son giriş: </small>
-                                    <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
