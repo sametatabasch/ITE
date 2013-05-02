@@ -17,8 +17,12 @@ $anadizin="./";
  * @param String $dil Dil değişkeni öntanımlı tr_TR
  * @param String $katalog gettext katalog adı öntanımlı ite
  */
-function setGettext($dil = 'tr_TR', $katalog = 'ite') {
-    if(!empty($_SESSION['dilSecimi'])) $dil=$_SESSION['dilSecimi'];
+function setGettext($dil = 'tr_TR.uft8', $katalog = 'ite') {
+    if(oturumKontrol()){
+        $VT=new database();
+        $dil=$VT->getresult("SELECT dilSecimi FROM ".$_SESSION['yetki']." WHERE id=".$_SESSION['id']);
+        $VT->baglantiyisonlandir();
+    }
     putenv('LC_ALL=' . $dil);
     setlocale(LC_ALL, $dil);
 // burada hangi kataloğumuzu kullanacağımızı

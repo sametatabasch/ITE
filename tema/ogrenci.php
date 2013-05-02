@@ -67,7 +67,7 @@ $veriler = $VT->fetch_assoc($sql);
                                         </label>
                                         <div class="controls">
                                             <select name="dilSecimi" class="selection input-medium">
-                                                <option value="tr_TR" <?php if ($veriler['dilSecimi'] == 'tr_TR') echo 'selected' ?> ><?php _e('Türkçe') ?></option>
+                                                <option value="tr_TR.utf8" <?php if ($veriler['dilSecimi'] == 'tr_TR.utf8') echo 'selected' ?> ><?php _e('Türkçe') ?></option>
                                                 <option value="en_US.utf8" <?php if ($veriler['dilSecimi'] == 'en_US.utf8') echo 'selected' ?> ><?php _e('English') ?></option>
                                             </select>
                                         </div>
@@ -149,7 +149,7 @@ $veriler = $VT->fetch_assoc($sql);
                         <div class="controls-row">
                             <div class="span6"> 
                                 <label><?php
-                                    _e("Adi Soyadı:");
+                                    _e("Adı Soyadı:");
                                     echo $veriler['adiSoyadi'];
                                     ?></label>
                                 <label><?php
@@ -214,7 +214,7 @@ $veriler = $VT->fetch_assoc($sql);
                                     <div class="caption">
                                         <h3 class="text-success"><?php _e($dersler[$ders - 1]['adi']) ?></h3>
                                         <p><?php $dersler[$ders - 1]['aciklama'] ?></p>
-                                        <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+                                        <p><a class="btn btn-primary" href="#"><?php _e('Çalış')?></a></p>
                                     </div>
                                 </div>
                             </li>

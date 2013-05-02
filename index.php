@@ -20,6 +20,9 @@ include_once 'config.php';
                 case 'ogrenci':
                     include './tema/ogrenci.php';
                     break;
+                case 'ders':
+                    include './tema/ders.php';
+                    break;
                 default :
                     include './tema/default.php';
             }

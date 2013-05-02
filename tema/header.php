@@ -38,7 +38,7 @@
                     <button class="btn btn-primary" onclick="$('#login_form').submit();"><?php _e('Giriş') ?></button>
                 </div>
             </div>
-            <a id="uyeOl" href="#uyeOl_modal" class="btn btn-success btn-large pull-right margin5" role="button" data-toggle="modal"><?php _e('Üye ol') ?></a>
+            <a id="uyeOl" href="#uyeOl_modal" class="btn btn-success btn-large pull-right margin5" role="button" data-toggle="modal"><?php _e('Üye Ol') ?></a>
             <!-- Modal -->
             <div id="uyeOl_modal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-header">

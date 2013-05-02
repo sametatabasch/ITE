@@ -48,7 +48,7 @@ class database {
      *
      * @return void
      */
-    private function baglantiyisonlandir() {
+    public function baglantiyisonlandir() {
         mysql_close($this->connection);
     }
 
