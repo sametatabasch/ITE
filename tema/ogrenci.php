@@ -213,8 +213,8 @@ $veriler = $VT->fetch_assoc($sql);
                                 <div class="thumbnail"style="background:#ffffff;">
                                     <div class="caption">
                                         <h3 class="text-success"><?php _e($dersler[$ders - 1]['adi']) ?></h3>
-                                        <p><?php $dersler[$ders - 1]['aciklama'] ?></p>
-                                        <p><a class="btn btn-primary" href="#"><?php _e('Çalış')?></a></p>
+                                        <p><?php echo $dersler[$ders - 1]['aciklama'] ?></p>
+                                        <p><a class="btn btn-primary" href="?s=ders&d=<?php echo $dersler[$ders - 1]['adi']?>"><?php _e('Çalış')?></a></p>
                                     </div>
                                 </div>
                             </li>

@@ -67,6 +67,9 @@
                             <p class="radio pull-left margin5">
                             <input type="radio" name="uyeOl_yetki" id="uyeOl_ogretmen" value="ogretmen" /> <?php _e('Öğretmen') ?>
                             </p>
+                            <p class="radio pull-left margin5">
+                            <input type="radio" name="uyeOl_yetki" id="uyeOl_veli" value="veli" /> <?php _e('Veli') ?>
+                            </p>
                         </div>
                     </form>
                 </div>
