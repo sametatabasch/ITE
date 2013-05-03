@@ -12,10 +12,10 @@
         <?php if(strstr($_SERVER['QUERY_STRING'],'ders')):?>
         <li class="nav-header"><i class="icon-book"></i><?php _e('Ders')?></li>
         <li><a href="./ders.php"></i><?php _e('Konu Anlatımı')?></a></li>
-        <li><a href="#"><?php _e('Uygulama')?></a></li>
-        <li><a href="#"><?php _e('Video')?></a></li>
-        <li><a href="#"><?php _e('Oyun')?></a></li>
-        <li><a href="#"><?php _e('Sözlük')?></a></li>
+        <li><a href="?s=ders&d=Fen ve Teknoloji&u=MADDENİN YAPISI VE ÖZELLİKLERİ&i=sunu"><?php _e('Sunu')?></a></li>
+        <li><a href="?s=ders&d=Fen ve Teknoloji&u=MADDENİN YAPISI VE ÖZELLİKLERİ&i=oyun"><?php _e('Oyun')?></a></li>
+        <li><a href="?s=ders&d=Fen ve Teknoloji&u=MADDENİN YAPISI VE ÖZELLİKLERİ&i=sozluk"><?php _e('Sözlük')?></a></li>
+        <li><a href="?s=ders&d=Fen ve Teknoloji&u=MADDENİN YAPISI VE ÖZELLİKLERİ&i=sinav"><?php _e('Sınav')?></a></li>
         <li><a href="http://uzem.gençbilişim.net/course/view.php?id=10"><i class="icon-comment"></i><?php _e('Forum')?></a></li>
         <?php endif;?>
         <li class="nav-header">Sidebar</li>

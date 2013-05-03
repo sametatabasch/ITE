@@ -4,10 +4,10 @@
  */
 ?>
 <div id="header" class="row-fluid header">
-    <div class="span1 logo yesil">
-        LOGO
+    <div class="span5">
+        <img class="image logo" src="./img/logo.jpg"/>
     </div>
-    <div class="span11 gri">
+    <div class="span7">
         <?php if (!oturumKontrol()): ?>
             <a id="loginOgrenci" class="btn btn-primary btn-large pull-right margin5" href="#giris_modal" role="button" data-toggle="modal"><?php _e('Giriş Yap') ?></a>
             <!-- Modal -->

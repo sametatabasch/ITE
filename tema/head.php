@@ -15,6 +15,9 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
 <link href="css/style.css" rel="stylesheet" media="screen"/>
+
+
+<script src="http://jwpsrv.com/library/6EnFLLPfEeK06iIACpYGxA.js"></script>
 <?php if (strstr($_SERVER['SCRIPT_NAME'],'editor.php')): ?>
     <!-- Ckeditor-->
     <script src="./ckeditor/ckeditor.js"></script>

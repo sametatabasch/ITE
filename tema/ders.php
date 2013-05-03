@@ -39,8 +39,8 @@ include_once './config.php';
                             <div class="row-fluid">
                             <?php endif; ?>
                             <li class="span3">
-                                <div class="thumbnail"style="background:#ffffff;">
-                                    <div class="caption">
+                                <div class="thumbnail"style="background:#ffffff;position: relative;">
+                                    <div class="caption" style="height: 300px;">
                                         <h5 class="text-success"><?php _e($unite) ?></h5>
                                         <p>
                                         <ul class="nav nav-list">
@@ -49,8 +49,9 @@ include_once './config.php';
                                             <?php endforeach; ?>
                                         </ul>
                                         </p>
-                                        <p><a class="btn btn-primary" href="?s=ders&d=<?php echo $ders ?>&u=<?php echo $unite ?>"><?php _e('Çalış') ?></a></p>
+                                        
                                     </div>
+                                    <a style="position: absolute;bottom: 5px;right: 5px;" class="btn btn-primary" href="?s=ders&d=<?php echo $ders ?>&u=<?php echo $unite ?>&i=konuanlatimi"><?php _e('Çalış') ?></a>
                                 </div>
                             </li>
                             <?php if ($i % 4 == 3): ?>
@@ -61,9 +62,31 @@ include_once './config.php';
                     endforeach;
                 }else {
                     $unite = $_GET['u'];
+                    $icerik = $_GET['i'];
                     ?>
                     <h2><?php echo $unite ?></h2>
-                    <div class="row-fluid"></div>            
+                    <hr>
+                    <div class="row-fluid">
+                        <?php
+                        switch ($icerik) {
+                            case 'konuanlatimi':
+                                include './dersicerik/1/konuanlatimi.html';
+                                break;
+                            case 'sunu':
+                                include './dersicerik/1/sunu.html';
+                                break;;
+                            case 'sinav':
+                                include './dersicerik/1/sinav.html';
+                                break;
+                            case 'oyun':
+                                include './dersicerik/1/oyun.html';
+                                break;
+                            case 'sozluk':
+                                include './dersicerik/1/sozluk.html';
+                                break;
+                        }
+                        ?>
+                    </div>            
                     <?php
                 }
                 ?>

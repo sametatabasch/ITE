@@ -5,9 +5,11 @@
 ?>
 <hr>
 <footer class="row-fluid">
-    <p class="well well-small">
-        footer
-    </p>
+    <div class="container-fluid">
+        <p class="well well-small">
+            Gençbilişim UZEM 
+        </p>
+    </div>
 </footer>
 
 
