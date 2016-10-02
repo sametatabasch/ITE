@@ -29,7 +29,7 @@ $arr = array(
 );
 if ($VT->insert($yetki, $arr)) {
 
-    $sonuclar = $VT->fetch_array("SELECT * FROM ogrenci WHERE mail='$mail' AND sifre='$sifre'");
+    $sonuclar = $VT->select('*','ogrenci',"mail='$mail' AND sifre='$sifre'",'');
 
     $_SESSION['kullaniciAdi'] = $sonuclar['kullaniciAdi'];
     $_SESSION['mail'] = $sonuclar['mail'];

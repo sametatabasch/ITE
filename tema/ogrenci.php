@@ -1,8 +1,7 @@
 <?php
 include_once './config.php';
 $VT = new database;
-$sql = "SELECT * FROM " . $_SESSION['yetki'] . " WHERE id=" . $_SESSION['id'];
-$veriler = $VT->fetch_assoc($sql);
+$veriler = $VT->select('*',$_SESSION['yetki'],"id=" . $_SESSION['id']."",'');
 ?>
 <div class="row-fluid">
     <!-- Sidebar-->
@@ -124,7 +123,7 @@ $veriler = $VT->fetch_assoc($sql);
                 $dilSecimi = $_POST['dilSecimi'];
                 $kullaniciAdi = $_POST['kullaniciAdi'];
                 $mail = $_POST['mail'];
-                $_POST['sifre'] == '' ? $sifre = $VT->getresult("SELECT sifre FROM " . $_SESSION['yetki'] . " WHERE id=" . $_SESSION['id']) : $sifre = md5($_POST['sifre']);
+                $_POST['sifre'] == '' ? $sifre = $VT->select('sifre',$_SESSION['yetki'],"id=" . $_SESSION['id'],'')['sifre'] : $sifre = md5($_POST['sifre']);
                 $arr = array(
                     'adiSoyadi' => $adiSoyadi,
                     'sinifi' => $sinifi,
@@ -203,7 +202,7 @@ $veriler = $VT->fetch_assoc($sql);
                         $derslerDizi = array(1, 2, 5, 6);
                         break;
                 }
-                $dersler = $VT->fetch_assoc("SELECT * FROM dersler");
+                $dersler = $VT->select('*','dersler','','');
                 ?>
                 <div class="span12 well">
                     <h4><?php _e('Dersler') ?></h4>

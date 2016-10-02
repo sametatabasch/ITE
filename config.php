@@ -20,7 +20,7 @@ $anadizin="./";
 function setGettext($dil = 'tr_TR.uft8', $katalog = 'ite') {
     if(oturumKontrol()){
         $VT=new database();
-        $dil=$VT->getresult("SELECT dilSecimi FROM ".$_SESSION['yetki']." WHERE id=".$_SESSION['id']);
+        $dil=$VT->select('dilSecimi',$_SESSION['yetki'],"id=".$_SESSION['id'],'')['dilSecimi'];
         $VT->baglantiyisonlandir();
     }
     putenv('LC_ALL=' . $dil);
@@ -68,7 +68,7 @@ function gravatar($mail,$boyut,$class)
 	}else
 	{
             $VT=new database;
-            if($VT->getresult("SELECT cinsiyet FROM ".$_SESSION['yetki']." WHERE id=".$_SESSION['id']."")=='bayan'){
+            if($VT->select('cinsiyet',$_SESSION['yetki'],"id=".$_SESSION['id'],'')['cinsiyet']=='bayan'){
                 $default ="http://gencbilisim.net/ite/img/profil/1.png";
             }  else {
                 $default ="http://gencbilisim.net/ite/img/profil/6.png";
@@ -79,7 +79,3 @@ function gravatar($mail,$boyut,$class)
 	$resim='<img src="'.$grav_url.'" class="'.$class.'" />'; 
 	return $resim;
 };
-/**
- * veri tabanı sınıfı için değişken
- */
-?>

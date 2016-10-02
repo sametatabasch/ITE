@@ -19,8 +19,8 @@ include_once './config.php';
             <div class="row-fluid">
                 <?php
                 $VT = new database();
-                $uniteler = $VT->getresult("SELECT uniteler FROM dersler WHERE adi='$ders'");
-                $kazanimlar = $VT->getresult("SELECT kazanimlar FROM dersler WHERE adi='$ders'");
+                $uniteler = $VT->select('uniteler','dersler',"adi='$ders'",'')['uniteler'];
+                $kazanimlar = $VT->select('kazanimlar','dersler',"adi='$ders'",'')['kazanimlar'];
                 $uniteler = explode('-', $uniteler);
                 $kazanimlar = explode('~', $kazanimlar);
                 $i = 0;

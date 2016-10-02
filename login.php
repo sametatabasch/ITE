@@ -8,8 +8,8 @@ $VT=new database;
 $mail = $_POST['mail'];
 $sifre = md5($_POST['pass']);
 
-if ($VT->NUM_ROWS("SELECT * FROM ogrenci WHERE (mail='$mail' OR kullaniciAdi='$mail' ) AND sifre='$sifre'") > 0) {
-    $sonuclar = $VT->fetch_array("SELECT * FROM ogrenci WHERE (mail='$mail' OR kullaniciAdi='$mail' ) AND sifre='$sifre'");
+if ($VT->num_rows("SELECT * FROM ogrenci WHERE (mail='$mail' OR kullaniciAdi='$mail' ) AND sifre='$sifre'") > 0) {
+    $sonuclar = $VT->select('*','ogrenci',"(mail='$mail' OR kullaniciAdi='$mail' ) AND sifre='$sifre'",'');
     if (isset($_POST['remeber'])) {
         $_SESSION['kullaniciAdi'] = $sonuclar['kullaniciAdi'];
         $_SESSION['mail'] = $sonuclar['mail'];
